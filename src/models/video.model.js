@@ -13,7 +13,6 @@
 */
 
 import { Schema, model } from "mongoose";
-import { type } from "os";
 
 
 const videoSchema = new Schema(
