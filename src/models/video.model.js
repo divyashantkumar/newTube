@@ -13,7 +13,7 @@
 */
 
 import { Schema, model } from "mongoose";
-
+import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
 const videoSchema = new Schema(
     {
@@ -61,6 +61,8 @@ const videoSchema = new Schema(
     },
     { timestamps: true } // mongoose will add createdAt and updatedAt fields to the schema automatically 
 );
+
+videoSchema.plugin(mongooseAggregatePaginate);
 
 const Video = model("Video", videoSchema);
 
